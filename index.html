@@ -35,6 +35,18 @@
       }
 
     </style>
+    <script type="text/javascript">
+function trackOutboundLink(link, category, action) { 
+ 
+try { 
+_gaq.push(['_trackEvent', category , action]); 
+} catch(err){}
+ 
+setTimeout(function() {
+document.location.href = link.href;
+}, 100);
+}
+</script>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,7 +66,7 @@
 		<li>Web and mobile service innovation</li> 
 		<li>Capability development and transformation</li></ul>
 	<p>Let's talk about your services and what I can do to help.</p>
-	<h2><a href="http://mattedgar.com">Matt Edgar</a></h2>
+	<h2><a href="http://mattedgar.com" onClick="trackOutboundLink(this, 'Outbound Links', 'mattedgar.com'); return false;">Matt Edgar</a></h2>
 	<p><small>Changeful Ltd is a company registered in England and Wales. Registered number: 8010450.</small></p>
 	</div>
 </body></html>
